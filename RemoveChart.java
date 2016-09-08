@@ -8,7 +8,7 @@ public class RemoveChart {
 		// TODO Auto-generated method stub
 		String s = "abcdd";
 		removeCh(s, 'e');
-		//removeCh2(s,'k');
+		removeCh2(s,'k');
 	}
 	
 //Iterate through the String, one character at a time	
@@ -25,8 +25,7 @@ public class RemoveChart {
 			if(c1[i] == c){
 				continue;
 			}else {
-				result.append((Character.toString(c1[i])));
-				System.out.println("result " + result);
+				result.append((Character.toString(c1[i])));			
 			}			
 		}
 		return result.toString();
@@ -35,13 +34,12 @@ public class RemoveChart {
 //Find a method in the String class that can solve this in one line	
 	public static String removeCh2(String s , char c){
 		if(s.length() == 0){
-			return null;
+			return s;
 		}
 		if(c == ' '){
-			return null;
+			return s;
 		}
 		String result = s.replaceAll(Character.toString(c),"");
-		System.out.println(" result " + result);
 		return result;
 	}
 
